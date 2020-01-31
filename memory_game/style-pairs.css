@@ -5,8 +5,9 @@
 }
 
 body {
-  height: 100vh;
-  background: rgba(104, 172, 236, 0.993);
+  /* height: 100vh; */
+  /* background: rgba(104, 172, 236, 0.993); */
+  background: #333;
   /* display: flex; */
 }
 
@@ -16,16 +17,24 @@ a {
   z-index: 9;
 }
 
+#link-back {
+  margin: 0;
+  width: 120px;
+  background: rgb(255, 217, 0);
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .main-container {
   display: flex;
   flex-direction: row;
-  margin-top: 30px;
+  /* margin-top: 10px; */
 }
 .information {
   border: 2px solid rgb(255, 217, 0);
   display: flex;
   flex-direction: column;
-  margin: 60px 60px 30px 60px;
+  margin: 0 60px 30px 60px;
   padding: 10px;
   font-family: "Bangers", cursive;
   /* color: rgb(255, 221, 31); */
@@ -33,11 +42,22 @@ a {
 }
 
 #title {
-  padding-bottom: 50px;
+  background: lightcoral;
+  width: 260px;
 }
 
 #chronos {
-  padding-bottom: 70px;
+  background: rgb(255, 217, 0);
+  padding: 0;
+  margin: 0 0 50px 0;
+  width: 80px;
+}
+
+#attempts {
+  background: rgb(255, 217, 0);
+  padding: 0;
+  margin: 0;
+  width: 145px;
 }
 
 .memory-game {
@@ -47,7 +67,7 @@ a {
   flex-wrap: wrap;
   width: 640px;
   height: 640px;
-  margin: auto;
+  margin: 0 0 0 0;
   perspective: 1000px;
 }
 
