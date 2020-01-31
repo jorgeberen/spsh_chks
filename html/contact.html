@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="spanish, gcse, languages, language learning, language revision">
+    <!-- <link rel="stylesheet" media="screen and (max-width:768px)" href="./css/mobile.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="/styles/main.css">  
+  <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#sidenav" class="btn open"><i class="fas fa-bars"></i>  Menu</a>
+        <ul id="main-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/html/about.html">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div id="sidenav">
+          <!-- <ul id="lis-nav"> -->
+          <div class="item">
+            <a a class="nav-link" href="/index.html"><i class="fas fa-home fa"></i> Home</a>
+          </div>
+          <div class="item">
+            <a a class="nav-link" href="/html/activities.html"
+              ><i class="fas fa-brain"></i> Activities</a
+            >
+          </div>
+          <div class="item">
+            <a a class="nav-link" href="/html/videos.html"
+              ><i class="far fa-play-circle"></i> Videos</a
+            >
+          </div>
+          <div class="item">
+            <a a class="nav-link" href="/html/posts.html"
+              ><i class="fas fa-clipboard"></i> Posts</a
+            >
+          </div>
+          <div class="item">
+            <a a class="nav-link" href="/html/study_guide.html"
+              ><i class="fas fa-book-reader"></i> Study Guide</a
+            >
+          </div>
+          <!-- </ul> -->
+        </div>
+        <a href="#!" class="close sidenav-overlay"></a>
+  <!-- <nav id="main-navbar">
+    <div class="logo-1">
+
+      <img src="./img/logoc.jpg" alt="logo" id="logo-nav">
+    </div>
+    <ul>
+      <li class="list-item"><a class="current" href="index.html"><i class="fas fa-home fa"></i> Home</a></li>
+
+      <li class="list-item"><a href="about.html"><i class="fas fa-bullseye fa"></i> About</a></li>
+
+      <li class="list-item"><a href="contact.html"><i class="fas fa-address-book fa"></i> Contact</a></li>
+    </ul>
+
+  </nav> -->
+ 
+    <style>
+     
+      body {
+        /* background-color: #b9cdf1; */
+        background-image: linear-gradient(250deg, #f9ea8f 0%, #aff1da 74%);
+        color: #fff;
+      }
+
+      a {
+       text-decoration: none;
+      }
+
+      #container {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 400px;
+        padding-top: 60px;
+      }
+
+      .form-wrap {
+        background-color: white;
+        padding: 15px 25px;
+        color: #333;
+      }
+
+      .form-wrap h1,
+      .form-wrap p {
+       text-align: center;
+      }
+
+      .form-wrap .form-group {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .form-wrap .form-group label {
+        display: block;
+        color: #666;
+      }
+
+      .form-wrap .form-group input {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        border: #ddd 1px solid;
+        border-radius: 5px;
+      }
+
+      .form-wrap button {
+        background-color: #49c1a2;
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        color: white;
+      }
+
+      .form-wrap button:hover {
+        color: #37a08e;
+        cursor: pointer;
+        background-color: orange;
+        color: pink;
+      }
+      .form-wrap .bottom-text {
+        font-size: 0.85em;
+      }
+      footer {
+       text-align: center;
+       margin-top: 10px;
+      }
+      footer a {
+        color: #49c1a2;
+      }
+      textarea {
+        width: 335px;
+        height: 200px;  
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-wrap">
+        <h1>Get in touch</h1>
+        <p>Drop me a message</p>
+        <form action="process.php" method="POST">
+          <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first-name" />
+          </div>
+          <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last-name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" id="message"></textarea>
+          </div>
+          <button type="submit" value="Submit" class="btn">Send</button>
+        </form>
+      </div>
+    </div>
+    <!-- Footer -->
+  <footer id="main-footer" class="bg-dark text-center py-1">
+      <div class="container">
+        <p>Copyright &copy; 2019, SpanishChunks, All Rights Reserved</p>
+      </div>
+    </footer>
+</body>
+</html>

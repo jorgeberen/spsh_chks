@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Interactive Sentence Builders</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="title">
+      <h1 class="text-center">LAS VACACIONES</h1>
+      <h2 class="subtitle text-center">El pasado</h2>
+      <h3 class="text-center">Here you have a sentence builder on Holidays.<br>
+        Clik on each chunk (phrase) to listen to it.</h2>
+        <div class="title-imgs">
+        <img src="beach.png" alt="playa">
+        <img src="ice-cream.png" alt="playa">
+        <img src="sunset.png" alt="playa">
+        </div>
+      </header>
+
+<!-- Audio Data -->
+<section class="audio-data">
+  <audio id="a-audio1" class="audio" src="sounds/escocia.mp3"></audio>
+  <audio id="a-audio2" class="audio" src="sounds/chile.mp3"></audio>
+  <audio id="a-audio3" class="audio" src="sounds/"></audio>
+  <audio id="a-audio4" class="audio" src="sounds/"></audio>
+  <audio id="a-audio5" class="audio" src="sounds/"></audio>
+  <audio id="a-audio6" class="audio" src="sounds/"></audio>
+  <audio id="a-audio7" class="audio" src="sounds/"></audio>
+  <audio id="a-audio8"class="audio" src="sounds/"></audio>
+  <audio id="a-audio9" src="sounds/"></audio>
+  <audio id="a-audio10" src="sounds/"></audio>
+  <audio id="a-audio11" src="sounds/"></audio>
+  <audio id="a-audio12" src="sounds/"></audio>
+  <audio id="a-audio13" src="sounds/"></audio>
+  <audio id="a-audio14" src="sounds/"></audio>
+  <audio id="a-audio15" src="sounds/"></audio>
+  <audio id="a-audio16" src="sounds/"></audio>
+</section>
+      <!-- Section Sentence Builder 1: Essentials  -->
+    <div id="sentence-builder">
+      <div class="table-desc">ESSENTIAL INFO</div>
+        <div id="column-1">
+          <div class="heading-1-text">
+            ¿Adónde fuiste?
+          </div>
+        </div>
+          <div id="chunks1" class="chunks1">
+          <div onclick="play()" id="chunk-c1-1" class="chunk chunk1">Fui a Escocia <span class="trans">// I went to Scotland.</span></div>
+          <div id="chunk-c1-2" class="chunk chunk1">Fui a Chile <span class="trans">// I went to Chile.</span></div>
+          <div id="chunk-c1-3" class="chunk chunk1">Fui a Argentina <span class="trans">// I went to Argentina.</span></div>
+          <div id="chunk-c1-4" class="chunk chunk1">Fui a Colombia <span class="trans">// I went to Colombia.</span></div>
+          <div id="chunk-c1-5" class="chunk chunk1">Fui a Marruecos <span class="trans">// I went to Morocco.</span></div>
+        </div>
+        
+        <div id="column-2">
+          <div class="heading-2-text">
+            ¿Con quién fuiste?
+          </div>
+        </div>
+          <div class="chunks2">
+          <div id="chunk-c2-1" class="chunk chunk2">Fui con mis amigos. <span class="trans">// I went with my friends.</span></div>
+          <div id="chunk-c2-2" class="chunk chunk2"">Fui con mi insti. <span class="trans">// I went with my school</span></div>
+          <div id="chunk-c2-3" class="chunk chunk2">Fui con mi familia. <span class="trans">// I went with my family</span></div>
+          <div id="chunk-c2-3" class="chunk chunk2">Fui con mi mejor amiga. <span class="trans">// I went with my best friend</span></div>
+          <div id="chunk-c2-3" class="chunk chunk2">Fui con mi peor enemigo. <span class="trans">// I went with my worst enemy.</span></div>
+        </div>
+        
+        <div id="column-3">
+          <div class="heading-3-text">
+            ¿Cómo viajaste?
+          </div>
+        </div>
+        <div class="chunks3">
+          <div class="chunk" id="chunkc3-1">Viajé en avión. <span class="trans">// I travelled by plane.</span></div>
+          <div class="chunk" id="chunkc3-2">Viajé en coche. <span class="trans">// I travelled by car.</span></div>
+          <div class="chunk" id="chunkc3-3">Viajé en autocar. <span class="trans">// I travelled by coach.</span></div>
+          <div class="chunk" id="chunkc3-4">Viajé en barco. <span class="trans">// I travelled by boat.</span></div>
+        </div>
+      </div>
+    <!-- Section Sentence Builder 2: Accomodation  -->
+    <div id="sentence-builder">
+        <div class="table-desc">ACCOMODATION</div>
+      <div id="column-1">
+        <div class="heading-11-text">
+          ¿Dónde te alojaste?
+        </div>
+      </div>
+        <div class="chunks11">
+        <div id="chunk-c1-1" class="chunk chunk1">Me alojé en un hotel</div>
+        <div id="chunk-c1-2" class="chunk chunk1">Me alojé en un apartamento</div>
+        <div id="chunk-c1-3" class="chunk chunk1">Me quedé en una pensión</div>
+        <div id="chunk-c1-4" class="chunk chunk1">Me quedé en casa de un amigo</div>
+        <div id="chunk-c1-5" class="chunk chunk1">Me alojé en un camping</div>
+      </div>
+      
+      <div id="column-2">
+        <div class="heading-21-text">
+          ¿Dónde estaba el alojamiento?
+        </div>
+      </div>
+        <div class="chunks21">
+        <div id="chunk-c2-1" class="chunk chunk2">que estaba cerca de la playa.</div>
+        <div id="chunk-c2-2" class="chunk chunk2"">que estaba en el centro de la ciudad.</div>
+        <div id="chunk-c2-3" class="chunk chunk2">que estaba en el campo.</div>
+        <div id="chunk-c2-3" class="chunk chunk2">que estaba en un pueblo.</div>
+        <div id="chunk-c2-3" class="chunk chunk2">que estaba lejos de la ciudad.</div>
+        <div id="chunk-c2-3" class="chunk chunk2">que estaba en medio de la nada.</div>
+      </div>
+      
+      <div id="column-3">
+        <div class="heading-31-text">
+          ¿Cómo era el alojamiento?
+        </div>
+      </div>
+      <div class="chunks31">
+        <div class="chunk" id="chunkc3-1">Era grande y lujoso.</div>
+        <div class="chunk" id="chunkc3-2">Era barato y práctico.</div>
+        <div class="chunk" id="chunkc3-3">Tenía piscina y sauna.</div>
+        <div class="chunk" id="chunkc3-4">Había restaurante y gimnasio.</div>
+        <div class="chunk" id="chunkc3-4">No tenía aire acondicionado.</div>
+        <div class="chunk" id="chunkc3-4">Era tranquilo y bonito.</div>
+      </div>
+    </div>
+        <!-- Section Sentence Builder 3: Activities  -->
+        <div id="sentence-builder">
+            <div class="table-desc">WHAT YOU DID AND WHAT HAPPENED</div>
+          <div id="column-1">
+            <div class="heading-11-text">
+              ¿Qué hiciste?
+            </div>
+          </div>
+            <div class="chunks12">
+            <div id="chunk-c1-1" class="chunk chunk1">Saqué muchas fotos.</div>
+            <div id="chunk-c1-2" class="chunk chunk1">Visité monumentos.</div>
+            <div id="chunk-c1-3" class="chunk chunk1">Hice turismo y lo pasé genial.</div>
+            <div id="chunk-c1-4" class="chunk chunk1">Perdí mi cartera en la playa.</div>
+            <div id="chunk-c1-5" class="chunk chunk1">Nadé en el mar y tomé el sol.</div>
+            <div id="chunk-c1-5" class="chunk chunk1">Descansé todo el tiempo porque estaba de vacaciones.</div>
+            <div id="chunk-c1-5" class="chunk chunk1">Leí varios libros.</div>
+            <div id="chunk-c1-5" class="chunk chunk1">Jugué al baloncesto y comí muchos helados.</div>
+          </div>
+          
+          <div id="column-2">
+            <div class="heading-21-text">
+              ¿Qué tiempo hizo?
+            </div>
+          </div>
+            <div class="chunks22">
+            <div id="chunk-c2-1" class="chunk chunk2">Hizo sol y calor todos los días.</div>
+            <div id="chunk-c2-2" class="chunk chunk2"">No hizo nada de viento pero llovió un día.</div>
+            <div id="chunk-c2-3" class="chunk chunk2">Hizo frío.</div>
+            <div id="chunk-c2-3" class="chunk chunk2">Nevó e hizo frío todos los días.</div>
+            <div id="chunk-c2-3" class="chunk chunk2">Hizo buen tiempo.</div>
+            <div id="chunk-c2-3" class="chunk chunk2">Hizo mal tiempo toda la semana.</div>
+          </div>
+          
+          <div id="column-3">
+            <div class="heading-31-text">
+              Exclamaciones
+            </div>
+          </div>
+          <div class="chunks32">
+            <div class="chunk" id="chunkc3-1">¡Qué divertido!</div>
+            <div class="chunk" id="chunkc3-2">¡Qué guay!</div>
+            <div class="chunk" id="chunkc3-3">¡Fue genial!</div>
+            <div class="chunk" id="chunkc3-4">¡Lo pasé muy bien!</div>
+            <div class="chunk" id="chunkc3-4">¡Qué desastre! </div>
+            <div class="chunk" id="chunkc3-4">¡Qué fastidio! </div>
+          </div>
+        </div>
+
+    <!-- Footer -->
+    <div>Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <script src="test.js"></script> 
+  </body>
+</html>

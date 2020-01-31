@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="./css/mobile.css">
+    <script src="https://apis.google.com/js/platform.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Click to listen to chunks</title>
+</head>
+<body>
+    <nav id="main-navbar">
+        <div class="logo-1">
+          <img src="./img/logoc.jpg" alt="logo" id="logo-nav">
+        </div>
+        <ul>
+          <li class="list-item"><a class="current" href="index.html"><i class="fas fa-home fa"></i> Home</a></li>
+      
+          <li class="list-item"><a href="about.html"><i class="fas fa-bullseye fa"></i> About</a></li>
+      
+          <li class="list-item"><a href="contact.html"><i class="fas fa-address-book fa"></i> Contact</a></li>
+        </ul>
+      </nav>
+  
+    <div class="top"><h1>Click-&-Listen</h1>
+      <h4>Click on the phrases to listen to the Spanish pronunciation of the senteneces.</h4>
+    </div>
+
+  <div class="chunks">
+    <div onclick="play1()" class="chunk1">Tengo</div>
+    <div onclick="play2()" class="chunk2">un perro</div>
+    <div onclick="play3()" class="chunk3">blanco.</div>
+  </div>
+
+  <audio id="audio1" src="sounds/Tengo.wav"></audio>
+  <audio id="audio2" src="sounds/un_perro.wav"></audio>
+  <audio id="audio3" src="sounds/Blanco.wav"></audio>
+  
+  <footer id="main-footer" class="bg-dark text-center py-1">
+      <div class="container">
+        <p id="copy">Copyright &copy; 2019, SpanishChunks, All Rights Reserved</p>
+        <style>
+          footer {
+            position: fixed;
+            bottom: 0;
+          }
+          #copy {
+            padding-top: 1.5rem;
+            padding-left: 1.5rem;
+            padding-bottom: 1rem;
+            color: darkred;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+          }
+        </style>
+      </div>
+    </footer>
+
+  <script>
+    // Listen for a click on any of the chunks. 
+    // document.addEventListener('click', function(e) {
+    //   console.log(e)
+    //   console.log(e.target)
+    //   const audio = document.querySelector(`audio[id="${e.target}"]`);
+    //   console.log(`audio[id="${e.target}"]`)
+    // })
+
+    // function playsound(e) {
+    //   const audio = document.querySelector(`audio[id="${e.target}"]`);
+    //   console.log(audio)
+      // audio.play();
+    //}
+
+  //   function removeTransition(e) {
+  //   console.log("running")
+  //   if (e.propertyName !== 'transform') return;
+  //   e.target.classList.remove('playing');
+  // }
+
+    function play1() {
+      document.getElementById('audio1').play();
+      // addEventListener('click', function(e) {
+      // const box = document.querySelector(e.target);
+      // const box = e.target
+      // box.classList.add('playing');
+      // })
+      console.log("1")
+      // let box = document.querySelector(".chunk1");
+      // console.log(box)
+      // box.classList.add('playing');
+      // document.addEventListener('transitionend', removeTransition)
+          
+    }
+
+    function play2() {
+      document.getElementById('audio2').play();
+      // console.log("2")
+      // let boxtwo = document.querySelector(".chunk2");
+      // console.log(boxtwo)
+      // boxtwo.classList.add('playing');
+      // document.addEventListener('transitionend', removeTransition)
+    }
+
+    function play3() {
+      document.getElementById('audio3').play();
+      // console.log("3")
+      // let boxthree = document.querySelector(".chunk3");
+      // console.log(boxthree)
+      // boxthree.classList.add('playing');
+      // document.addEventListener('transitionend', removeTransition)
+    }
+
+
+    // function removeTransition(e) {
+    // if (e.propertyName !== 'transform') return;
+    // e.target.classList.remove('playing');
+    // }
+    // function playSound(e) {
+    // const audio = document.querySelector(`audio[data-chunk="${e.chunkCode}"]`);
+    // const chunk = document.querySelector(`div[data-chunk="${e.chunkCode}"]`);
+    // if (!audio) return;
+    // chunk.classList.add('playing');
+    // audio.currentTime = 0;
+    // audio.play();
+    // }
+    // const chunks = Array.from(document.querySelectorAll('.chunk'));
+    // chunks.forEach(chunk => chunk.addEventListener('transitionend', removeTransition));
+    // window.addEventListener('chunkdown', playSound);
+
+  </script>
+
+</body>
+
+</html>

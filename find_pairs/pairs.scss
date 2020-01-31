@@ -1,0 +1,29 @@
+.deck {
+  display: flex;
+  max-width: 1300px;
+  text-align: center;
+}
+
+item {
+  width: 200px;
+  height: 200px;
+  border: solid;
+  margin: 10px;
+  align-items: center;
+}
+item1 {
+  width: 200px;
+  height: 200px;
+  border: solid;
+  margin: 10px;
+  align-items: center;
+}
+
+.show {
+  background: lightsalmon;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.9;
+}
