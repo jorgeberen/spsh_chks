@@ -19,10 +19,11 @@ a {
 
 #link-back {
   margin: 0;
-  width: 120px;
+  width: 150px;
   background: rgb(255, 217, 0);
   padding: 5px;
   border-radius: 5px;
+  font-family: "Poppins", sans-serif;
 }
 
 .main-container {
