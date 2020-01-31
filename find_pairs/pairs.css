@@ -1,4 +1,4 @@
-#contain-cards {
+.deck {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
