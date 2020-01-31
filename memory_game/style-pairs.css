@@ -35,7 +35,7 @@ a {
   border: 2px solid rgb(255, 217, 0);
   display: flex;
   flex-direction: column;
-  margin: 0 60px 30px 60px;
+  margin: 40px 60px 30px 60px;
   padding: 10px;
   font-family: "Bangers", cursive;
   /* color: rgb(255, 221, 31); */
@@ -66,9 +66,9 @@ a {
   background: rgba(254, 255, 181, 0.993);
   display: flex;
   flex-wrap: wrap;
-  width: 640px;
-  height: 640px;
-  margin: 0 0 0 0;
+  width: 550px;
+  height: 550px;
+  margin: 40px 0 0 0;
   perspective: 1000px;
 }
 
