@@ -94,7 +94,7 @@ function reset() {
     minute = 0;
     moves.innerHTML = 0;
     window.clearInterval(interval);
-    timer.innerHTML = 0;
+    timer.innerHTML = "0 mins 0 secs";
     cards.forEach(card => card.classList.toggle("flip"));
     cards.forEach(card => card.addEventListener("click", flipCard));
     countPairs = 0;
