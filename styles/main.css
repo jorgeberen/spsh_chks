@@ -159,8 +159,8 @@ h1 {
   /* position: relative; */
   text-align: center;
   cursor: pointer;
-  -webkit-box-shadow: 6px 10px 5px #7a7a7a;
-          box-shadow: 6px 10px 5px #7a7a7a;
+  -webkit-box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
+          box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
 }
 
 #card:hover {
@@ -206,11 +206,33 @@ h1 {
   padding-top: 20px;
 }
 
-.contain-buildersh2:nth-child(odd) {
+.contain-builders h2:nth-child(odd) {
   background: #aff1da;
 }
 
-.contain-buildersh2:nth-child(even) {
+.contain-builders h2:nth-child(even) {
   background: #f9ea8f;
+}
+
+.cont-puzzles {
+  width: 700px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  margin: 48px;
+}
+
+.cont-puzzles a:nth-child(odd) {
+  background-color: #f9ea8f;
+}
+
+.cont-puzzles a:nth-child(even) {
+  background-color: #aff1da;
+}
+
+.cont-puzzles a:hover {
+  background-color: lightcoral;
 }
 /*# sourceMappingURL=main.css.map */

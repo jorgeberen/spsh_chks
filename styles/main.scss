@@ -168,7 +168,7 @@ h1 {
   /* position: relative; */
   text-align: center;
   cursor: pointer;
-  box-shadow: 6px 10px 5px rgb(122, 122, 122);
+  box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
   &:hover {
     transform: scale(1.1);
     transition: transform 0.5s;
@@ -205,10 +205,29 @@ h1 {
     padding-top: 20px;
   }
 
-  &h2:nth-child(odd) {
+  h2:nth-child(odd) {
     background: $primary-color;
   }
-  &h2:nth-child(even) {
+  h2:nth-child(even) {
     background: $secondary-color;
+  }
+}
+
+// Memory games
+
+.cont-puzzles {
+  width: 700px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  a:nth-child(odd) {
+    background-color: $secondary-color;
+  }
+  a:nth-child(even) {
+    background-color: $primary-color;
+  }
+  margin: 48px;
+  a:hover {
+    background-color: $red-back;
   }
 }
