@@ -1,10 +1,17 @@
-const cards = document.querySelectorAll(".memory-card");
+let cards = document.querySelectorAll(".memory-card");
+const resetBtn = document.querySelector(".reset");
 
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+var countClicks = 0;
+let countPairs = 0;
+var moves = document.querySelector(".moves");
 
 function flipCard() {
+  countClicks++;
+  moves.innerHTML = countClicks;
+  if (countClicks == 1) startTimer();
   if (lockBoard) return;
   if (this === firstCard) return;
   this.classList.toggle("flip");
@@ -28,6 +35,7 @@ function checkForMatch() {
 }
 
 function disableCards() {
+  countPairs++;
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
 
@@ -56,4 +64,42 @@ function resetBoard() {
   });
 })();
 
+// Game timer
+
+var second = 0,
+  minute = 0;
+var timer = document.querySelector(".timer");
+var interval;
+function startTimer() {
+  interval = setInterval(function() {
+    let allFlipped = document.querySelectorAll(".flip");
+    if (allFlipped.length == 12) return;
+    timer.innerHTML = " " + minute + " mins " + second + " secs";
+    second++;
+    if (second == 60) {
+      minute++;
+      second = 0;
+    }
+    if (minute == 60) {
+      hour++;
+      minute = 0;
+    }
+  }, 1000);
+}
+
+function reset() {
+  if (countPairs == 6) {
+    countClicks = 0;
+    second = 0;
+    minute = 0;
+    moves.innerHTML = 0;
+    window.clearInterval(interval);
+    timer.innerHTML = 0;
+    cards.forEach(card => card.classList.toggle("flip"));
+    cards.forEach(card => card.addEventListener("click", flipCard));
+    countPairs = 0;
+  }
+}
+
 cards.forEach(card => card.addEventListener("click", flipCard));
+resetBtn.addEventListener("click", reset);
