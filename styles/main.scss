@@ -8,6 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  display: block;
 }
 
 a {
@@ -21,6 +22,7 @@ a {
 header {
   position: relative;
   display: flex;
+  width: 100%;
   /* flex-direction: row-reverse; */
   justify-content: space-between;
   padding: 1rem;
@@ -136,15 +138,82 @@ h1 {
   width: 100%;
 }
 
-.cont-act {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  justify-items: center;
-  margin: 0 150px 0 150px;
-  position: relative;
-  /* width: 100%; */
-  padding: 50px;
+@media (min-width: 1126px) {
+  .cont-act {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    margin: 0 60px 0 50px;
+    // position: relative;
+    /* width: 100%; */
+    // padding: 50px;
+  }
+  #card {
+    width: 300px;
+    height: 200px;
+    background: rgba(249, 234, 143, 1);
+    /* position: relative; */
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.5s;
+    }
+  }
+}
+
+@media (max-width: 1125px) {
+  .cont-act {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    margin: 0 60px 0 50px;
+    // position: relative;
+    /* width: 100%; */
+    // padding: 50px;
+  }
+  #card {
+    width: 300px;
+    height: 200px;
+    background: rgba(249, 234, 143, 1);
+    /* position: relative; */
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.5s;
+    }
+  }
+}
+
+@media (max-width: 674px) {
+  #card {
+    width: 270px;
+    height: 200px;
+    background: rgba(249, 234, 143, 1);
+    /* position: relative; */
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.5s;
+    }
+  }
+  .cont-act {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    margin: 0 60px 0 50px;
+    // position: relative;
+    /* width: 100%; */
+    // padding: 50px;
+  }
 }
 
 // .card {
@@ -160,20 +229,6 @@ h1 {
 //     transition: transform 0.5s;
 //   }
 // }
-
-#card {
-  width: 300px;
-  height: 200px;
-  background: rgba(249, 234, 143, 1);
-  /* position: relative; */
-  text-align: center;
-  cursor: pointer;
-  box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
-  &:hover {
-    transform: scale(1.1);
-    transition: transform 0.5s;
-  }
-}
 
 .img-card {
   padding-top: 10px;

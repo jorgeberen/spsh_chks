@@ -7,6 +7,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  display: block;
 }
 
 a {
@@ -21,6 +22,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   /* flex-direction: row-reverse; */
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -139,37 +141,97 @@ h1 {
   width: 100%;
 }
 
-.cont-act {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  justify-items: center;
-  margin: 0 150px 0 150px;
-  position: relative;
-  /* width: 100%; */
-  padding: 50px;
+@media (min-width: 1126px) {
+  .cont-act {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    margin: 0 60px 0 50px;
+    /* width: 100%; */
+  }
+  #card {
+    width: 300px;
+    height: 200px;
+    background: #f9ea8f;
+    /* position: relative; */
+    text-align: center;
+    cursor: pointer;
+    -webkit-box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
+            box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
+  }
+  #card:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
 }
 
-#card {
-  width: 300px;
-  height: 200px;
-  background: #f9ea8f;
-  /* position: relative; */
-  text-align: center;
-  cursor: pointer;
-  -webkit-box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
-          box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
+@media (max-width: 1125px) {
+  .cont-act {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    margin: 0 60px 0 50px;
+    /* width: 100%; */
+  }
+  #card {
+    width: 300px;
+    height: 200px;
+    background: #f9ea8f;
+    /* position: relative; */
+    text-align: center;
+    cursor: pointer;
+    -webkit-box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
+            box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
+  }
+  #card:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
 }
 
-#card:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+@media (max-width: 674px) {
+  #card {
+    width: 270px;
+    height: 200px;
+    background: #f9ea8f;
+    /* position: relative; */
+    text-align: center;
+    cursor: pointer;
+    -webkit-box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
+            box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
+  }
+  #card:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
+  .cont-act {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    margin: 0 60px 0 50px;
+    /* width: 100%; */
+  }
 }
 
 .img-card {
