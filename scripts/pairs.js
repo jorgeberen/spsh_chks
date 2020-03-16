@@ -7,14 +7,28 @@ let firstCard, secondCard;
 var countClicks = 0;
 let countPairs = 0;
 var moves = document.querySelector(".moves");
+var firstTimeClick = 0; // variable to control the trigger of timer, decoupled from countClicks
+var timer = document.querySelector(".timer");
+timer.innerHTML = "0 mins 0 secs";
+moves.innerHTML = "0";
+
+//  Just Javascript exercises
+// console.log(typeof lockBoard);
+// console.log(typeof cards);
+// console.log(typeof resetBtn);
+// console.log(typeof countClicks);
+
+//
 
 function flipCard() {
-  countClicks++;
-  moves.innerHTML = countClicks;
-  if (countClicks == 1) startTimer();
+  firstTimeClick++;
+  console.log(firstTimeClick);
+  if (firstTimeClick === 1) startTimer();
   if (lockBoard) return;
   if (this === firstCard) return;
   this.classList.toggle("flip");
+  countClicks++;
+  moves.innerHTML = countClicks;
 
   if (!hasFlippedCard) {
     // first click
@@ -57,18 +71,18 @@ function resetBoard() {
   [firstCard, secondCard] = [null, null];
 }
 
-(function shuffle() {
+function shuffle() {
   cards.forEach(card => {
     let randomPos = Math.floor(Math.random() * 12);
     card.style.order = randomPos;
   });
-})();
+}
 
 // Game timer
 
 var second = 0,
   minute = 0;
-var timer = document.querySelector(".timer");
+
 var interval;
 function startTimer() {
   interval = setInterval(function() {
@@ -88,18 +102,27 @@ function startTimer() {
 }
 
 function reset() {
-  if (countPairs == 6) {
-    countClicks = 0;
-    second = 0;
-    minute = 0;
-    moves.innerHTML = 0;
-    window.clearInterval(interval);
-    timer.innerHTML = "0 mins 0 secs";
-    cards.forEach(card => card.classList.toggle("flip"));
-    cards.forEach(card => card.addEventListener("click", flipCard));
-    countPairs = 0;
-  }
+  // if (countPairs == 6) {
+  firstTimeClick = 0;
+  countClicks = 0;
+  second = 0;
+  minute = 0;
+  moves.innerHTML = 0;
+  window.clearInterval(interval);
+  timer.innerHTML = "0 mins 0 secs";
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+  cards.forEach(card => {
+    if (card.classList.contains("flip")) card.classList.toggle("flip");
+  });
+
+  cards.forEach(card => card.addEventListener("click", flipCard));
+
+  countPairs = 0;
+  shuffle();
+  // }
 }
 
 cards.forEach(card => card.addEventListener("click", flipCard));
 resetBtn.addEventListener("click", reset);
+shuffle();
