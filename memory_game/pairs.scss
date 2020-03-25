@@ -1,0 +1,289 @@
+@import "../styles/variables";
+// Style the base document
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  z-index: 9;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Header */
+
+header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 10%;
+  min-height: 80px;
+  /* flex-direction: row-reverse; */
+  justify-content: space-between;
+  // padding: 1rem;
+  // background-color: #f9ea8f;
+  background-image: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
+}
+
+#main-links {
+  display: inline-flex;
+  margin: auto 2% auto auto;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 1rem 0 1rem 2rem;
+  margin: auto auto auto 0;
+}
+
+li {
+  list-style: none;
+  padding: 1rem;
+  &:hover {
+    // background: $red-back;
+    border-radius: 15%;
+    text-decoration: underline 5px $red-back;
+  }
+}
+
+// Sidenav
+#sidenav {
+  width: 80%;
+  max-width: 190px;
+  height: 100%;
+  position: fixed;
+  top: 80px;
+  background: rgba(249, 234, 143, 0.98);
+  left: -350px;
+  transition: left 0.35s;
+  z-index: 10;
+}
+
+#sidenav:target {
+  left: 0;
+}
+
+// Overlay generated over the entire page. Clicking on this grey translucent area closes the sidenav
+.sidenav-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(228, 221, 129, 0.3);
+  left: 100%;
+  top: 0;
+  z-index: 8;
+  cursor: default;
+}
+
+#sidenav:target + .sidenav-overlay {
+  left: 0;
+}
+
+.item:hover {
+  background: $primary-color;
+  cursor: pointer;
+}
+
+.nav-link {
+  display: block;
+  // position: absolute;
+  padding: 1rem;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+// .deck {
+//   display: flex;
+//   max-width: 1300px;
+//   text-align: center;
+// }
+
+// .item {
+//   width: 200px;
+//   height: 200px;
+//   border: solid;
+//   margin: 10px;
+//   align-items: center;
+// }
+// .item1 {
+//   width: 200px;
+//   height: 200px;
+//   border: solid;
+//   margin: 10px;
+//   align-items: center;
+// }
+
+// .show {
+//   background: lightsalmon;
+// }
+
+// .disabled {
+//   pointer-events: none;
+//   opacity: 0.9;
+// }
+
+/* Main content of the page*/
+
+#over-container {
+  position: absolute;
+  min-height: 670px;
+  height: calc(100% - 80px);
+  width: 100%;
+}
+
+#link-back {
+  margin: 0;
+  width: max-content;
+  background: rgb(255, 217, 0);
+  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  /* margin-top: 10px; */
+}
+.information {
+  width: 300px;
+  border: 2px solid rgb(255, 217, 0);
+  display: flex;
+  flex-direction: column;
+  margin: 40px 200px 30px 60px;
+  padding: 10px;
+  font-family: "Bangers", cursive;
+
+  /* color: rgb(255, 221, 31); */
+  /* height: 300px; */
+}
+
+#title {
+  background: lightcoral;
+  margin: 2rem 0 2rem 0;
+  padding: 0 0.7rem 0 0.7rem;
+  font-size: 2.3rem;
+  width: max-content;
+}
+
+.timer-cont {
+  display: inline-flex;
+  margin-bottom: 60px;
+}
+
+#chronos {
+  background: rgb(255, 217, 0);
+  // width: 80px;
+  padding: 0 0.7rem 0 0.7rem;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.timer {
+  margin: 0 0 0 20px;
+  font-size: 1.8rem;
+}
+
+.move-cont {
+  display: inline-flex;
+}
+
+#attempts {
+  background: rgb(255, 217, 0);
+  margin: 0;
+  padding: 0 0.7rem 0 0.7rem;
+  font-size: 1.8rem;
+}
+
+.moves {
+  margin-left: 20px;
+  font-size: 1.8rem;
+}
+
+.reset {
+  background-color: #4caf50;
+  margin-top: 3rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  padding: 0.5rem;
+  width: 120px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.memory-game {
+  border: 2px solid rgb(255, 217, 0);
+  background: rgba(254, 255, 181, 0.993);
+  display: flex;
+  flex-wrap: wrap;
+  width: 550px;
+  height: 550px;
+  margin: 40px 0 0 0;
+  perspective: 1000px;
+}
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  position: relative;
+  margin: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform.5s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  background: #1c7ccc;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+/* Footer */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  div {
+    padding-bottom: 0.5rem;
+  }
+}
