@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/dragDrop1.css" />
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/477bc778cd.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Drag 'n' Drop</title>
+  </head>
+  <body>
+    <!-- Header with links to three different pages and pop-up menu that comes in from the left side -->
+    <header>
+      <a href="#sidenav" class="btn open"><i class="fas fa-bars"></i> Menu</a>
+      <ul id="main-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="/html/about.html">About</a></li>
+        <li><a href="/html/contact.html">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- This is the sidenav which is hidden by default and it is only displayed upon clicking on the Menu link-->
+    <div id="sidenav">
+      <!-- <ul id="lis-nav"> -->
+      <div class="item">
+        <a a class="nav-link" href="#"><i class="fas fa-home fa"></i> Home</a>
+      </div>
+      <div class="item">
+        <a a class="nav-link" href="/html/activities.html"
+          ><i class="fas fa-brain"></i> Activities</a
+        >
+      </div>
+      <div class="item">
+        <a a class="nav-link" href="/html/"
+          ><i class="far fa-play-circle"></i> Videos</a
+        >
+      </div>
+      <div class="item">
+        <a a class="nav-link" href="/html/posts.html"
+          ><i class="fas fa-clipboard"></i> Posts</a
+        >
+      </div>
+      <div class="item">
+        <a a class="nav-link" href="/html/"
+          ><i class="fas fa-book-reader"></i> Study Guide</a
+        >
+      </div>
+      <!-- </ul> -->
+    </div>
+    <a href="#!" class="close sidenav-overlay"></a>
+
+    <!-- Section for the sentences -->
+    <section class="main-container">
+      <div class="sentences">
+        <!-- <div id="inner-dropzone"></div> -->
+
+        <h3 class="sentence text-center">
+          1. Los domingos
+          <span class="dropzone" data-type="suelo">________</span>
+          ir a la iglesia.
+        </h3>
+        <h3 class="sentence text-center">
+          2. Cuando era pequeño
+          <span class="dropzone" data-type="solía">________</span> jugar al
+          béisbol.
+        </h3>
+        <h3 class="sentence text-center">
+          3. Todos los martes
+          <span class="dropzone" data-type="juego">________</span> al ajedrez.
+        </h3>
+        <h3 class="sentence text-center">
+          4. Nunca <span class="dropzone" data-type="hago">________</span> los
+          deberes.
+        </h3>
+      </div>
+      <div class="fillings">
+        <h3 class="filling text-center drag-drop yes-drop" data-type="suelo">
+          suelo
+        </h3>
+        <h3 class="filling text-center drag-drop yes-drop" data-type="solía">
+          solía
+        </h3>
+        <h3 class="filling text-center drag-drop yes-drop" data-type="juego">
+          juego
+        </h3>
+        <h3 class="filling text-center drag-drop yes-drop" data-type="hago">
+          hago
+        </h3>
+      </div>
+    </section>
+    <script type="text/javascript" src="/scripts/dragNDrop.js"></script>
+  </body>
+</html>
