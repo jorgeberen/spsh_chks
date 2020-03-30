@@ -18,7 +18,8 @@ function dragMoveListener(event) {
 // Declare variables to be used to perform the data comparison between sentences and fillers
 var sentences = [...document.querySelectorAll(".dropzone")];
 var sentencesData = sentences.map(x => x.dataset.type); // get an array with all the data types of the sentences to be completed
-var fillers = [...document.querySelectorAll(".filling")]; // get an array with all the data types of the sentence fillers to be dragged and dropped
+var fillers = [...document.querySelectorAll(".filling")];
+// get an array with all the data types of the sentence fillers to be dragged and dropped
 var fillersData = fillers.map(x => x.dataset.type);
 var arrayOfDrops = [];
 
@@ -58,10 +59,13 @@ interact(".dropzone").dropzone({
     event.target.classList.remove("drop-target");
     event.relatedTarget.classList.remove("can-drop");
     event.relatedTarget.classList.remove("has-dropped");
+    event.relatedTarget.classList.remove("dropped");
   },
   ondrop: function(event) {
     // fillers[0] = console.log(event.relatedTarget.dataset.type);
     console.log(event.target.dataset.type);
+    event.relatedTarget.classList.add("has-dropped");
+
     // const y = sentencesData.indexOf(event.target.dataset.type);
     arrayOfDrops[sentencesData.indexOf(event.target.dataset.type)] =
       event.relatedTarget.dataset.type;
@@ -79,10 +83,23 @@ interact(".dropzone").dropzone({
 //   console.log(event.target.parentElement);
 // }
 
-function checkAnswwers() {
+function checkAnswers() {
+  var allDropped = [...document.querySelectorAll(".has-dropped")];
+  let count = 0;
+  if (allDropped.length != 4)
+    return alert("Fill all the sentences to check the answers"); // this prevents the function from running if not all the fillers are inside the sentences
   for (x of sentencesData) {
-    console.log(arrayOfDrops[sentencesData.indexOf(x)] === x);
+    if (arrayOfDrops[sentencesData.indexOf(x)] === x) {
+      count += 1;
+      fillers[sentencesData.indexOf(x)].classList.remove("dropped-wrong");
+      fillers[sentencesData.indexOf(x)].classList.add("dropped");
+      fillers[sentencesData.indexOf(x)].classList.remove("can-drop");
+    } else {
+      fillers[sentencesData.indexOf(x)].classList.add("dropped-wrong");
+      fillers[sentencesData.indexOf(x)].classList.remove("can-drop");
+    }
   }
+  if (count === 4) return setTimeout(() => alert("Well done!"), 1000);
 }
 
 interact(".drag-drop").draggable({

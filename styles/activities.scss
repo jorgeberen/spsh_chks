@@ -158,9 +158,9 @@ footer {
     text-align: center;
     cursor: pointer;
     box-shadow: 6px 7px 5px rgba(122, 122, 122, 0.356);
+    transition: transform 500ms;
     &:hover {
       transform: scale(1.1);
-      transition: transform 0.5s;
     }
   }
 }
@@ -254,9 +254,9 @@ footer {
   width: 100%;
 }
 
-#esto {
-  max-width: 50%;
-  display: block;
-  height: auto;
-  margin: auto;
-}
+// #esto {
+//   max-width: 50%;
+//   display: block;
+//   height: auto;
+//   margin: auto;
+// }

@@ -7,7 +7,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #c2e6f1;
 }
 
 a {
@@ -120,16 +119,18 @@ li:hover {
   display: block;
 }
 
-/* Stylin of the main container and its contens */
-#link-to-drag {
+/* Title*/
+#link-to-activities {
   position: absolute;
-  background: lightcoral;
+  background: #0d8c0d;
   border-radius: 0.5em;
-  padding: 0.5em 1em 0.5em 1em;
-  left: 25em;
+  padding: 0.7em;
+  left: 3em;
+  top: 30em;
+  color: #fff;
 }
 
-#section-wrapper {
+.content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,126 +143,55 @@ li:hover {
   position: absolute;
 }
 
-.main-container {
-  border: solid #333;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  top: 8rem;
-  left: 25rem;
-  width: 50%;
-  height: 400px;
-  -ms-touch-action: none;
-      touch-action: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.main-container .sentence {
-  padding-bottom: 1em;
-}
-
-#check-answers {
-  position: absolute;
-  background: darkgreen;
-  color: #fff;
-  top: 1em;
-  right: 1em;
-  padding: 0.4em;
-  border: none;
-  border-radius: 0.2em;
-}
-
-#check-answers:hover {
-  cursor: pointer;
-  background: lightgreen;
-  color: #333;
-}
-
-.fillings {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-touch-action: none;
-      touch-action: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.filling {
-  position: relative;
-  font-weight: 400;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  border-radius: 3px;
-  background: #f702ff;
-  color: #fff;
-  padding: 0.05em 0.15em 0.05em 0.15em;
-}
-
-.has-dropped {
-  font-size: 400;
-}
-
-.dropped {
-  background: lime;
-  color: #000;
-}
-
-.dropped-wrong {
-  background: red;
-}
-
-/* Dragging and Dropping classes*/
-#inner-dropzone {
-  height: 200px;
+.drag-and-drop {
   width: 100%;
-  border: solid yellow;
 }
 
-.dropzone {
-  border: dashed 4px transparent;
-  border-radius: 4px;
-  width: 80%;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+h1 {
+  margin: 3rem;
+  text-align: left;
+  font-size: 2em;
 }
 
-.drop-active {
-  border-color: #aaa;
+#page-description {
+  margin: 3rem;
+  text-align: left;
+  font-size: 1.3rem;
 }
 
-.drop-target {
-  background-color: #29e;
-  border-color: #fff;
-  border-style: solid;
+/* Styling of the list of links to each sentence filler task*/
+.cont-puzzles {
+  width: 700px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  margin: 48px;
 }
 
-.can-drop {
-  background: yellow;
-  color: #000;
+.cont-puzzles p {
+  text-align: left;
+  font-size: 2.5rem;
 }
 
+.cont-puzzles a:nth-child(odd) {
+  background-color: #f9ea8f;
+}
+
+.cont-puzzles a:nth-child(even) {
+  background-color: #aff1da;
+}
+
+.cont-puzzles a:hover {
+  background-color: lightcoral;
+}
+
+/* Footer Styling*/
 #build-footer {
   position: absolute;
   width: 100%;
   bottom: 0;
   height: 50px;
 }
-/*# sourceMappingURL=dragDrop1.css.map */
+/*# sourceMappingURL=drag_collection.css.map */

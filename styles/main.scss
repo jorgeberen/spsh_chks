@@ -33,6 +33,16 @@ header {
   background-image: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
 }
 
+#beta {
+  margin: auto;
+  &:after {
+    content: "BETA";
+    font-family: "Rubik Mono One", sans-serif;
+    background: ivory;
+    padding: 0 0.5em 0 0.5em;
+  }
+}
+
 #main-links {
   display: inline-flex;
   margin: auto 2% auto auto;
@@ -227,13 +237,20 @@ footer {
 /* Styling of Sentence Builders */
 
 #link-to-builders {
-  position: relative;
-  top: 2px;
-  left: 0;
-  color: #333;
-  padding: 3px;
-  margin-top: 0;
-  background: #f9ea8f;
+  // position: relative;
+  // top: 2px;
+  // left: 0;
+  // color: #333;
+  // padding: 3px;
+  // margin-top: 0;
+  // background: #f9ea8f;
+  position: absolute;
+  background: $green-back;
+  border-radius: 0.5em;
+  padding: 0.7em;
+  left: 22.3em;
+  top: 9em;
+  color: #fff;
 }
 
 .description {
@@ -273,6 +290,8 @@ footer {
 .contain-builders {
   padding-bottom: 3rem;
   margin-top: 10px;
+  width: 100%;
+  min-height: 800px;
   h2 {
     font-weight: lighter;
   }
@@ -296,11 +315,14 @@ footer {
 }
 
 .wrap-main {
-  position: absolute;
+  display: flex;
+  position: relative;
   width: 100%;
 }
 #build-footer {
-  bottom: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
 }
 
 // Memory games
